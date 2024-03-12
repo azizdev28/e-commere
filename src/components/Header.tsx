@@ -35,8 +35,9 @@ const Header = () => {
           </Link>
         </li>
         <div className="flex  gap-12">
-          <button> Sign Up </button>
-          <button>Sign In</button>
+          <Link href={"/shopcart"}>
+            <button> Add to Bag </button>
+          </Link>
         </div>
       </ul>
     </div>

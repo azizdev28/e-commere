@@ -15,6 +15,27 @@ const ProductDetailesPage = () => {
   const [open, setOpen] = useState(true);
   const { id } = useParams();
   const router = useRouter();
+
+  const handleClick = () => {
+    const products: ProductType[] =
+      JSON.parse(localStorage.getItem("carts") as string) || [];
+    const isExistProduct = products.find((c) => c.id === product?.id);
+    if (isExistProduct) {
+      const upData = products.map((c) => {
+        if (c.id === product?.id) {
+          return {
+            ...c,
+            ququantity: c.ququantity + 1,
+          };
+        }
+        return c;
+      });
+      localStorage.setItem("carts", JSON.stringify(upData));
+    } else {
+      const data = [...products, { ...product, ququantity: 1 }];
+      localStorage.setItem("carts", JSON.stringify(data));
+    }
+  };
   const handleClose = () => {
     setOpen(false);
     router.back();
@@ -89,7 +110,10 @@ const ProductDetailesPage = () => {
                       </p>
                     </div>
                     <div className="space-y-3 text-sm">
-                      <button className="button py-3 rounded-lg w-full bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover: text-black">
+                      <button
+                        className="button py-3 rounded-lg w-full bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover: text-black"
+                        onClick={handleClick}
+                      >
                         Add to bag
                       </button>
                       <button
