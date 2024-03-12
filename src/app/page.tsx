@@ -8,7 +8,7 @@ const Home = async () => {
   const products: ProductType[] = await res.json();
   console.log(products);
   return (
-    <main className="container h-screen max-w-7xl  mx-auto px-8 xl-0 ">
+    <main className="container  max-w-7xl  mx-auto px-8 xl-0 ">
       <HeroWrapper />
       <section className=" flex flex-col  space-y-12">
         <h1 className="text-5xl font-bold text-center">Shopp Website</h1>
