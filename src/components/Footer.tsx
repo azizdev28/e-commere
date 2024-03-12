@@ -1,55 +1,81 @@
+import Image from "next/image";
 import React from "react";
+import Instagram from "@/image/instagram.webp";
+import Facebook from "@/image/facebook.svg";
+import Ok from "@/image/ok.svg";
+import Telegram from "@/image/telegram.svg";
+import Tiktok from "@/image/tiktok.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bottom-0  ">
-      <footer className="text-gray-600 body-font bg-black">
+    <div className="bottom-0  mt-12 ">
+      <footer className="text-white body-font bg-black">
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                viewBox="0 0 24 24"
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+              Biz ijtimoiy axborot vositalarida
+            </h2>
+            <div className="flex gap-2 mb-12">
+              <a href="">
+                {" "}
+                <Image src={Instagram} alt="Instagram" />
+              </a>
+              <a href="">
+                {" "}
+                <Image src={Facebook} alt="Instagram" />
+              </a>
+              <a href="">
+                {" "}
+                <Image src={Ok} alt="Ok" />
+              </a>
+              <a href="">
+                {" "}
+                <Image src={Telegram} alt="Ok" />
+              </a>
+              <a href="">
+                {" "}
+                <Image src={Tiktok} alt="Ok" />
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <p className="mt-2 text-sm text-gray-500">Axborot xizmati</p>
+              <Link
+                href="https://alifshop.uz/uz"
+                className="hover:text-yellow-400"
               >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span className="ml-3 text-xl">Tailblocks</span>
-            </a>
-            <p className="mt-2 text-sm text-gray-500">
-              Air plant banjo lyft occupy retro adaptogen indego
-            </p>
+                @alifshop_uz
+              </Link>
+              <Link
+                href="https://alifshop.uz/uz"
+                className="hover:text-yellow-400"
+              >
+                +998 555 12 12 12
+              </Link>
+            </div>
           </div>
           <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+              <h2 className="title-font font-medium text-gray-400 tracking-widest text-lg mb-3">
+                Hujjatlar
               </h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none flex flex-col gap-4">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
+                  <a className="text-white hover:text-gray-800">
+                    Sotish uchun umumiy shartlar
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
+                  <a className="text-white hover:text-gray-800">
+                    Ofertalar arxivi
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Nizom</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Guvohnoma</a>
                 </li>
               </nav>
             </div>
@@ -59,24 +85,16 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">First Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Second Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Third Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Fourth Link</a>
                 </li>
               </nav>
             </div>
@@ -86,24 +104,16 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">First Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Second Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Third Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Fourth Link</a>
                 </li>
               </nav>
             </div>
@@ -113,41 +123,31 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">First Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Second Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Third Link</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  <a className="text-white hover:text-gray-800">Fourth Link</a>
                 </li>
               </nav>
             </div>
           </div>
         </div>
-        <div className="bg-gray-100">
+        <div className="bg-gray-700">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2020 Tailblocks —
+              2024 © alifshop.uz
               <a
                 href="https://twitter.com/knyttneve"
                 rel="noopener noreferrer"
-                className="text-gray-600 ml-1"
+                className="text-white ml-1"
                 target="_blank"
-              >
-                @knyttneve
-              </a>
+              ></a>
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a className="text-gray-500">
